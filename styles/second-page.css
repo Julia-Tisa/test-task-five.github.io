@@ -1,0 +1,20 @@
+.container {
+  margin-top: 50px;
+}
+  
+.form-group {
+  margin: 20px 0;
+}
+  
+.card {
+  width: 30%;
+}
+  
+#output {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  white-space: pre-wrap;
+  font-family: Consolas, monospace;
+}
