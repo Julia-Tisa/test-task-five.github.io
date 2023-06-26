@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 $(window).on('load', function() {
   $('#myModal').modal('show');
 });
@@ -65,3 +67,5 @@ $('form').submit(function(event) {
     }
   });
 });
+});
+
