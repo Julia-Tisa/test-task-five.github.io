@@ -1,8 +1,5 @@
-$(document).ready(function() {
-
 $(window).on('load', function() {
   $('#myModal').modal('show');
-});
 
 $('.btn').mouseup(function() { this.blur() })
 
@@ -68,4 +65,3 @@ $('form').submit(function(event) {
   });
 });
 });
-
