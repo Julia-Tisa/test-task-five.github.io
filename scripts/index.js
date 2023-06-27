@@ -1,9 +1,14 @@
 $(window).on('load', function() {
-  $('#myModal').modal('show');
 
   $('.btn').mouseup(function() { this.blur() })
 
-  $('.btn-close').click(function () { $('#myModal').modal('hide') });
+  const buttonClose = document.querySelector('.btn-close');
+  buttonClose.addEventListener('click', () => {
+    const modal = document.getElementById('myModal');
+    console.log(modal);
+    modal.classList.remove('show');
+    modal.classList.add('hide');
+  })
 
   $('.btn-warning')
     .click(function() {
@@ -24,7 +29,7 @@ $(window).on('load', function() {
     });
 
   $('#open-second-page').click(function() {
-    window.open('second-page.html', '_blank');
+    window.open('../pages/second-page.html', '_blank');
   });
 
   $('form').submit(function(event) {
@@ -54,7 +59,7 @@ $(window).on('load', function() {
 
     $.ajax({
       type: 'GET',
-      url: 'server.php',
+      url: '../server/server.php',
       data: jsonData,
       success: function(response) {
         alert('Ответ сервера: ' + response);
