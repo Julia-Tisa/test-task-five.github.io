@@ -4,15 +4,13 @@ const output = document.querySelector('#output');
 const handleSubmit = (event) => {
   event.preventDefault();
   const formData = new FormData(form);
-  const jsonData = {};
+  const data = {};
   
   for (let [key, value] of formData) {
-    jsonData[key] = value;
+    data[key] = value;
   }
 
-  const jsonString = JSON.stringify(jsonData);
-
-  output.innerHTML = jsonString;
+  output.innerHTML = JSON.stringify(data);
 
   fetch('../server/server.php')
   .then(response => response.text())
@@ -24,6 +22,6 @@ const handleSubmit = (event) => {
   });
     
   form.reset();
-}
+};
 
 form.addEventListener('submit', handleSubmit);
