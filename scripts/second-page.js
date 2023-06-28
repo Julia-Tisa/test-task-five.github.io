@@ -14,13 +14,7 @@ const handleSubmit = (event) => {
 
   output.innerHTML = jsonString;
 
-  fetch('../server/server.php', {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: jsonString
-  })
+  fetch('../server/server.php')
   .then(response => response.text())
   .then(data => {
     alert(data);
